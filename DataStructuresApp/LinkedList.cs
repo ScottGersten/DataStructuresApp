@@ -17,7 +17,7 @@ namespace DataStructuresApp
                 Data = data;
                 Next = null;
             }
-    }
+        }
 
         private Node head;
         private Node tail;
@@ -54,4 +54,109 @@ namespace DataStructuresApp
             }
 
         }
+
+        public bool RemoveFirst(out int data)
+        {
+            if (head == null)
+            {
+                data = default(int);
+                return false;
+            }
+            else
+            {
+                data = head.Data;
+                head = head.Next;
+                if (head == null)
+                {
+                    tail = null;
+                }
+                return true;
+            }
+        }
+
+        public bool RemoveLast(out int data)
+        {
+            if (head == null)
+            {
+                data = default(int);
+                return false;
+            }
+
+            else if (head == tail)
+            {
+                data = head.Data;
+                head = null;
+                tail = null;
+                return true;
+            }
+
+            else
+            {
+                Node newTail = head;
+                while (newTail.Next != null)
+                {
+                    newTail = newTail.Next;
+                }
+                data = tail.Data;
+                tail = newTail;
+                tail.Next = null;
+                return true;
+            }
+        }
+
+        public bool RemoveValue(int value)
+        {
+            if (head == null)
+            {
+                return false;
+            }
+
+            else if (head.Data == value)
+            {
+                head = head.Next;
+                if (head == tail)
+                {
+                    tail = null;
+                }
+                return true;
+            }
+
+            else
+            {
+                Node curr = head;
+                while (curr.Next != null && curr.Next.Data != value)
+                {
+                    curr = curr.Next;
+                }
+                if (curr.Next == null)
+                {
+                    return false;
+                }
+                else if (curr.Next == tail)
+                {
+                    tail = curr;
+                }
+                curr.Next = curr.Next.Next;
+                return true;
+
+            }
+        }
+
+        public void Enqueue(int data) => AddLast(data);
+        public bool Dequeue(out int data) => RemoveFirst(out data);
+        public void Push(int data) => AddFirst(data);
+        public bool Pop(out int data) => RemoveFirst(out data);
+
+        public void PrintList()
+        {
+            Node curr = head;
+            while (curr != null)
+            {
+                Console.Write(curr.Data);
+                Console.Write(" -> ");
+                curr = curr.Next;
+            }
+            Console.Write("-> END");
+        }
+    }
 }

@@ -2,40 +2,69 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DataStructuresApp.MainPage">
-    <Grid RowDefinitions="auto, *"
-          ColumnDefinitions="2*, 6*, 3*">
+    <Grid RowDefinitions="auto"
+          ColumnDefinitions="auto, auto"
+          HorizontalOptions="CenterAndExpand">
 
-        <Label Text="Hello"></Label>
+        <VerticalStackLayout Spacing="10"
+                             Padding="5"
+                             Grid.Row="0"
+                             Grid.Column="0"
+                             Grid.RowSpan="2"
+                             BackgroundColor="Azure"
+                             VerticalOptions="Center">
+            <Label x:Name="ListsLabel"
+                   Text="Linked List Structures"
+                   TextColor="BlueViolet"
+                   FontAttributes="Bold"></Label>
+
+            <Button x:Name="ListButton"
+                    Text="Linked List"
+                    Clicked="ListButton_Clicked"
+                    TextColor="BlueViolet"
+                    FontAttributes="Bold"
+                    Background="Transparent"
+                    BorderColor="BlueViolet"
+                    BorderWidth="5"></Button>
+
+            <Button x:Name="StackButton"
+                    Text="Stack"
+                    Clicked="StackButton_Clicked"
+                    TextColor="BlueViolet"
+                    FontAttributes="Bold"
+                    Background="Transparent"
+                    BorderColor="BlueViolet"
+                    BorderWidth="5"></Button>
+
+            <Button x:Name="QueueButton"
+                    Text="Queue"
+                    Clicked="QueueButton_Clicked"
+                    TextColor="BlueViolet"
+                    FontAttributes="Bold"
+                    Background="Transparent"
+                    BorderColor="BlueViolet"
+                    BorderWidth="5"></Button>
+
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Spacing="10"
+                             Padding="5"
+                             Grid.Row="0"
+                             Grid.Column="1"
+                             Grid.RowSpan="2"
+                             BackgroundColor="Azure"
+                             VerticalOptions="Center">
+            <Label x:Name="TreesLabel"
+                   Text="Tree Structures"
+                   TextColor="CadetBlue"
+                   FontAttributes="Bold"></Label>
+            
+            
+        </VerticalStackLayout>
 
 
     </Grid>
 
-    <VerticalStackLayout Spacing="10"
-                         Padding="5"
-                         Grid.Row="0"
-                         Grid.Column="0"
-                         Grid.RowSpan="2"
-                         BackgroundColor="Azure"
-                         VerticalOptions="Center">
-        
-        <Button x:Name="LinkedListButton"
-                Text="Linked List"
-                Clicked="LinkedListButton_Clicked"
-                TextColor="BlueViolet"
-                FontAttributes="Bold"
-                Background="Transparent"
-                BorderColor="BlueViolet"
-                BorderWidth="5"></Button>
-
-        <Button x:Name="BinaryTreeButton"
-                Text="Binary Tree"
-                Clicked="BinaryTreeButton_Clicked"
-                TextColor="CadetBlue"
-                FontAttributes="Bold"
-                Background="Transparent"
-                BorderColor="CadetBlue"
-                BorderWidth="5"></Button>
-        
-    </VerticalStackLayout>
+    
 
 </ContentPage>
