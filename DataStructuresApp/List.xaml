@@ -4,7 +4,7 @@
              x:Class="DataStructuresApp.List">
 
     <StackLayout Padding="20">
-        <Label Text="Linked List Visualizer"
+        <Label Text="List Visualization"
                FontSize="24"
                HorizontalOptions="Center"
                Margin="0,0,0,20" />
@@ -27,6 +27,24 @@
         <Button x:Name="RemoveButton"
                 Text="Remove by Value"
                 Clicked="RemoveButton_Clicked" />
+        
+        <!-- Labels for the head and tail -->
+        <StackLayout Margin="20,30,20,10"
+                     Orientation="Horizontal"
+                     HorizontalOptions="Center">
+            <Label Text="Head: "
+                   FontSize="18" />
+            <Label x:Name="HeadLabel"
+                   Text="null"
+                   FontSize="18"
+                   TextColor="Blue" />
+            <Label Text="    Tail: "
+                   FontSize="18" />
+            <Label x:Name="TailLabel"
+                   Text="null"
+                   FontSize="18"
+                   TextColor="Blue" />
+        </StackLayout>
 
         <!-- Visualization of linked list -->
         <ScrollView>

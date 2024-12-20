@@ -8,7 +8,7 @@ namespace DataStructuresApp
 {
     internal class LinkedList
     {
-        private class Node
+        public class Node
         {
             public int Data { get; set; }
             public Node Next { get; set; }
@@ -19,8 +19,8 @@ namespace DataStructuresApp
             }
         }
 
-        private Node head;
-        private Node tail;
+        public Node head { get; set; }
+        public Node tail { get; set; }
 
         public LinkedList()
         {
