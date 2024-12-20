@@ -58,8 +58,35 @@
                    Text="Tree Structures"
                    TextColor="CadetBlue"
                    FontAttributes="Bold"></Label>
-            
-            
+
+            <Button x:Name="BSTButton"
+                    Text="Binary Search Tree"
+                    Clicked="BSTButton_Clicked"
+                    TextColor="CadetBlue"
+                    FontAttributes="Bold"
+                    Background="Transparent"
+                    BorderColor="CadetBlue"
+                    BorderWidth="5"></Button>
+
+            <Button x:Name="AVLButton"
+                    Text="AVL Tree"
+                    Clicked="AVLButton_Clicked"
+                    TextColor="CadetBlue"
+                    FontAttributes="Bold"
+                    Background="Transparent"
+                    BorderColor="CadetBlue"
+                    BorderWidth="5"></Button>
+
+            <Button x:Name="SplayButton"
+                    Text="Splay Tree"
+                    Clicked="SplayButton_Clicked"
+                    TextColor="CadetBlue"
+                    FontAttributes="Bold"
+                    Background="Transparent"
+                    BorderColor="CadetBlue"
+                    BorderWidth="5"></Button>
+
+
         </VerticalStackLayout>
 
 

@@ -22,6 +22,21 @@
         {
             await Navigation.PushAsync(new List());
         }
+
+        private void BSTButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AVLButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SplayButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

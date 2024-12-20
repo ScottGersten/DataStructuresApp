@@ -1,4 +1,4 @@
-namespace DataStructuresApp;
+﻿namespace DataStructuresApp;
 
 public partial class List : ContentPage
 {
@@ -97,7 +97,7 @@ public partial class List : ContentPage
             {
                 LinkedListContainer.Children.Add(new Label
                 {
-                    Text = "->",
+                    Text = "→",
                     FontSize = 24,
                     VerticalOptions = LayoutOptions.Center,
                 });
@@ -119,7 +119,7 @@ public partial class List : ContentPage
         {
             LinkedListContainer.Children.Add(new Label
             {
-                Text = "-> null",
+                Text = "→ null",
                 FontSize = 24,
                 VerticalOptions = LayoutOptions.Center
             });
