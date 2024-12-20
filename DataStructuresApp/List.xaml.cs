@@ -100,6 +100,7 @@ public partial class List : ContentPage
                     Text = "→",
                     FontSize = 24,
                     VerticalOptions = LayoutOptions.Center,
+                    TextColor = Colors.DarkBlue,
                 });
             }
 
@@ -112,7 +113,8 @@ public partial class List : ContentPage
             {
                 Text = "null",
                 FontSize = 24,
-                VerticalOptions = LayoutOptions.Center
+                VerticalOptions = LayoutOptions.Center,
+                TextColor= Colors.DarkBlue,
             });
         }
         else
@@ -121,7 +123,8 @@ public partial class List : ContentPage
             {
                 Text = "→ null",
                 FontSize = 24,
-                VerticalOptions = LayoutOptions.Center
+                VerticalOptions = LayoutOptions.Center,
+                TextColor= Colors.DarkBlue,
             });
         }
     }

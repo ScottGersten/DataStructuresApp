@@ -1,58 +1,86 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DataStructuresApp.List">
+             x:Class="DataStructuresApp.List"
+             BackgroundColor="Grey">
 
-    <StackLayout Padding="20">
-        <Label Text="List Visualization"
+    <Grid Padding="20"
+          RowDefinitions="Auto, Auto, *, Auto, *"
+          ColumnDefinitions="*, *, *, *">
+
+        <!-- Title -->
+        <Label Grid.ColumnSpan="4"
+               Text="List Visualization"
                FontSize="24"
                HorizontalOptions="Center"
-               Margin="0,0,0,20" />
+               Margin="0,0,0,20"
+               TextColor="LightBlue" />
 
-        <!-- Input for adding a node -->
-        <Entry x:Name="InputEntry"
-               Placeholder="Enter a number to add"
-               Keyboard="Numeric" />
+        <!-- Add Section -->
+        <Button Grid.Row="1"
+                Grid.Column="1"
+                Text="Add"
+                Clicked="AddButton_Clicked"
+                TextColor="DarkBlue"
+                BackgroundColor="LightBlue"
+                BorderColor="DarkBlue"/>
 
-        <Button x:Name="AddButton"
-                Text="Add to End"
-                Clicked="AddButton_Clicked" />
+        <Entry Grid.Row="1"
+               Grid.Column="0"
+               x:Name="InputEntry"
+               Placeholder="Enter number to add"
+               PlaceholderColor="LightBlue"
+               Keyboard="Numeric" 
+               TextColor="LightBlue"/>
 
-        <!-- Input for removing a node -->
-        <Entry x:Name="RemoveEntry"
-               Placeholder="Enter a number to remove"
+        <!-- Remove Section -->
+        <Button Grid.Row="1"
+                Grid.Column="3"
+                Text="Remove"
+                Clicked="RemoveButton_Clicked"
+                TextColor="DarkBlue"
+                BackgroundColor="LightBlue"
+                BorderColor="DarkBlue" />
+
+        <Entry Grid.Row="1"
+               Grid.Column="2"
+               x:Name="RemoveEntry"
+               Placeholder="Enter number to remove"
+               PlaceholderColor="LightBlue"
                Keyboard="Numeric"
-               Margin="0,20,0,0" />
+               TextColor="LightBlue"/>
 
-        <Button x:Name="RemoveButton"
-                Text="Remove by Value"
-                Clicked="RemoveButton_Clicked" />
-        
-        <!-- Labels for the head and tail -->
-        <StackLayout Margin="20,30,20,10"
+        <!-- Head and Tail Labels -->
+        <StackLayout Grid.Row="2"
+                     Grid.ColumnSpan="4"
                      Orientation="Horizontal"
-                     HorizontalOptions="Center">
+                     HorizontalOptions="Center"
+                     Margin="0,20,0,10">
             <Label Text="Head: "
-                   FontSize="18" />
+                   FontSize="18"
+                   TextColor="LightBlue" />
             <Label x:Name="HeadLabel"
                    Text="null"
                    FontSize="18"
                    TextColor="Blue" />
             <Label Text="    Tail: "
-                   FontSize="18" />
+                   FontSize="18"
+                   TextColor="LightBlue" />
             <Label x:Name="TailLabel"
                    Text="null"
                    FontSize="18"
                    TextColor="Blue" />
         </StackLayout>
 
-        <!-- Visualization of linked list -->
-        <ScrollView>
+        <!-- List Visualization -->
+        <ScrollView Grid.Row="4"
+                    Grid.ColumnSpan="4">
             <StackLayout x:Name="LinkedListContainer"
                          Orientation="Horizontal"
                          HorizontalOptions="Center"
-                         VerticalOptions="Start">
-            </StackLayout>
+                         VerticalOptions="Start" />
         </ScrollView>
-    </StackLayout>
+
+    </Grid>
 </ContentPage>
+
